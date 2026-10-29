@@ -1,0 +1,140 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The popup is a fixed viewport, not a page: 384px is the widest Chrome will
+   render without the popup feeling like a window. */
+body.popup {
+  width: 384px;
+  min-height: 220px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+body.options {
+  padding: var(--s8) var(--s6);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 1px solid var(--rule-strong);
+  background: var(--ground-raised);
+  border-radius: var(--radius);
+  padding: var(--s1) var(--s3);
+  transition:
+    border-color var(--duration-fast) var(--ease),
+    background var(--duration-fast) var(--ease);
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--signal);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: var(--signal-ink);
+  font-weight: 600;
+}
+
+button.quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ink-muted);
+}
+
+button.quiet:hover:not(:disabled) {
+  color: var(--ink);
+  border-color: var(--rule);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: var(--radius);
+}
+
+/* Micro-labels: the instrument voice. Used for field names, never for content. */
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--ground-sunken);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: var(--s1) var(--s2);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--signal);
+  width: 15px;
+  height: 15px;
+}

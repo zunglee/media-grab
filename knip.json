@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "src/background/index.ts",
+    "src/content/index.ts",
+    "src/inject/page-hook.ts",
+    "src/offscreen/index.ts",
+    "src/ui/popup/main.ts",
+    "src/ui/options/main.ts",
+    "scripts/*.mjs",
+    "tests/**/*.ts"
+  ],
+  "project": ["src/**/*.{ts,svelte}", "scripts/*.mjs", "tests/**/*.ts"],
+  "ignoreExportsUsedInFile": true
+}

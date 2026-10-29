@@ -1,0 +1,105 @@
+/*
+ * MediaGrab design tokens - identity: SIGNAL.
+ *
+ * The product idea in one line: a page is a set of signals, and MediaGrab tells
+ * you which ones are worth taking. So the interface is an instrument readout,
+ * not a card grid: hairline rules instead of shadows, a level meter instead of a
+ * progress pill, monospaced numerics so figures line up column-wise, and exactly
+ * one accent colour that only ever marks the thing you should act on.
+ *
+ * What is deliberately absent (DESIGN-OS s4): gradients, glassmorphism, blurred
+ * blobs, rounded-everything cards, purple/blue tech accent, fade-up-on-scroll.
+ */
+
+:root {
+  /* --- ground: warm near-black, not blue-black. Reads as equipment, not chrome. --- */
+  --ground: #f4f1ec;
+  --ground-raised: #ffffff;
+  --ground-sunken: #e9e4dc;
+  --ink: #1b1e21;
+  --ink-muted: #5c6167;
+  --ink-faint: #666b71; /* 4.8:1 on --ground */
+  --rule: #d5cec3;
+  --rule-strong: #b9b0a2;
+
+  /* --- one accent. Amber = "act here". Never decorative. --- */
+  --signal: #9e4f10; /* 5.2:1 on --ground, 5.9:1 behind --signal-ink */
+  --signal-ink: #ffffff;
+  --signal-weak: #f0e0cd;
+
+  /* --- states --- */
+  --ok: #1f6b4f;
+  --warn: #8a6100;
+  --danger: #9d2c2c;
+  --live: #b3261e;
+
+  /* --- meter: strength of a detected signal --- */
+  --meter-track: #ddd6ca;
+  --meter-fill: #9e4f10;
+  --meter-weak: #b9b0a2;
+
+  /* --- type --- */
+  --font-ui:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Menlo, Consolas, monospace;
+
+  --text-xs: 10.5px;
+  --text-sm: 11.5px;
+  --text-base: 13px;
+  --text-md: 14px;
+  --text-lg: 17px;
+
+  --tracking-label: 0.09em;
+
+  /* --- 4px grid --- */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+
+  /* Corners stay small: this is an instrument, not a pill. */
+  --radius: 3px;
+  --radius-lg: 5px;
+
+  --focus: 0 0 0 2px var(--ground), 0 0 0 4px var(--signal);
+
+  --duration-fast: 90ms;
+  --duration: 160ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #171a1d;
+    --ground-raised: #1e2225;
+    --ground-sunken: #101315;
+    --ink: #e8e2d8;
+    --ink-muted: #9aa1a8;
+    --ink-faint: #868d93; /* 5.6:1 on --ground */
+    --rule: #2b3034;
+    --rule-strong: #3c4348;
+
+    --signal: #e07a2d;
+    --signal-ink: #171a1d;
+    --signal-weak: #33251a;
+
+    --ok: #4fb98c;
+    --warn: #d9a441;
+    --danger: #e06c6c;
+    --live: #ef5350;
+
+    --meter-track: #2b3034;
+    --meter-fill: #e07a2d;
+    --meter-weak: #4a5257;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration: 0ms;
+  }
+}

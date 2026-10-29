@@ -1,0 +1,473 @@
+{
+  "project": "media-grab",
+  "date": "2026-09-25",
+  "generatedAt": "2026-09-25T09:45:30.064Z",
+  "version": "0.1.5",
+  "type": "audit",
+  "overallGrade": "D",
+  "overallScore": 88,
+  "areaGrades": {
+    "code-quality": {
+      "grade": "A",
+      "score": 100
+    },
+    "build": {
+      "grade": "A",
+      "score": 100
+    },
+    "performance": {
+      "grade": "n/a",
+      "score": null
+    },
+    "accessibility": {
+      "grade": "n/a",
+      "score": null
+    },
+    "security": {
+      "grade": "F",
+      "score": 50
+    },
+    "seo-best-practices": {
+      "grade": "n/a",
+      "score": null
+    },
+    "docs-links": {
+      "grade": "A",
+      "score": 100
+    }
+  },
+  "checks": [
+    {
+      "id": "typecheck",
+      "title": "pnpm typecheck",
+      "area": "code-quality",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 5237,
+      "summary": "typecheck passed",
+      "findings": [],
+      "details": {
+        "durationMs": 5237
+      }
+    },
+    {
+      "id": "lint",
+      "title": "pnpm lint",
+      "area": "code-quality",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 529,
+      "summary": "lint passed",
+      "findings": [],
+      "details": {
+        "durationMs": 529
+      }
+    },
+    {
+      "id": "test",
+      "title": "pnpm test",
+      "area": "code-quality",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 1734,
+      "summary": "test passed",
+      "findings": [],
+      "details": {
+        "durationMs": 1734
+      }
+    },
+    {
+      "id": "build",
+      "title": "pnpm build",
+      "area": "build",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 2131,
+      "summary": "build passed",
+      "findings": [],
+      "details": {
+        "durationMs": 2131
+      }
+    },
+    {
+      "id": "knip",
+      "title": "knip (dead code / unused deps)",
+      "area": "code-quality",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 1069,
+      "summary": "0 unused file(s), 0 unused dep(s), 0 unlisted, 0 unused export(s)",
+      "findings": [],
+      "details": {
+        "unusedFiles": [],
+        "unusedDeps": [],
+        "unlisted": [],
+        "unusedExports": 0
+      }
+    },
+    {
+      "id": "pnpm-audit",
+      "title": "pnpm audit",
+      "area": "security",
+      "status": "fail",
+      "score": 0,
+      "durationMs": 18660,
+      "summary": "1 critical, 5 high, 8 moderate, 4 low",
+      "findings": [
+        {
+          "severity": "medium",
+          "message": "esbuild: esbuild enables any website to send any requests to the development server and read the response",
+          "location": "https://github.com/advisories/GHSA-67mh-4wv8-2f99",
+          "action": "Upgrade esbuild to >=0.24.3",
+          "humanDecision": false
+        },
+        {
+          "severity": "low",
+          "message": "cookie: cookie accepts cookie name, path, and domain with out of bounds characters",
+          "location": "https://github.com/advisories/GHSA-pxg6-pf52-xh8x",
+          "action": "Upgrade cookie to >=0.7.0",
+          "humanDecision": false
+        },
+        {
+          "severity": "high",
+          "message": "drizzle-orm: Drizzle ORM has SQL injection via improperly escaped SQL identifiers",
+          "location": "https://github.com/advisories/GHSA-gpj5-g38j-94v9",
+          "action": "Upgrade drizzle-orm to >=0.45.2",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "astro: Astro: XSS in define:vars via incomplete </script> tag sanitization",
+          "location": "https://github.com/advisories/GHSA-j687-52p2-xcff",
+          "action": "Upgrade astro to >=6.1.6",
+          "humanDecision": false
+        },
+        {
+          "severity": "low",
+          "message": "astro: Astro: Server island encrypted parameters vulnerable to cross-component replay",
+          "location": "https://github.com/advisories/GHSA-xr5h-phrj-8vxv",
+          "action": "Upgrade astro to >=6.1.10",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "uuid: uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+          "location": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+          "action": "Upgrade uuid to >=11.1.1",
+          "humanDecision": false
+        },
+        {
+          "severity": "low",
+          "message": "esbuild: esbuild allows arbitrary file read when running the development server on Windows",
+          "location": "https://github.com/advisories/GHSA-g7r4-m6w7-qqqr",
+          "action": "Upgrade esbuild to >=0.28.1",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "astro: Astro: XSS via Unescaped Attribute Names in Spread Props",
+          "location": "https://github.com/advisories/GHSA-jrpj-wcv7-9fh9",
+          "action": "Upgrade astro to >=6.4.6",
+          "humanDecision": false
+        },
+        {
+          "severity": "high",
+          "message": "sharp: sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+          "location": "https://github.com/advisories/GHSA-f88m-g3jw-g9cj",
+          "action": "Upgrade sharp to >=0.35.0",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "astro: Astro: XSS via unescaped spread attribute names in renderHTMLElement (incomplete fix for CVE-2026-54298)",
+          "location": "https://github.com/advisories/GHSA-f48w-9m4c-m7f5",
+          "action": "Upgrade astro to >=7.0.6",
+          "humanDecision": false
+        },
+        {
+          "severity": "low",
+          "message": "astro: Astro: Cross-site scripting via unescaped transition:* directive values on hydrated islands",
+          "location": "https://github.com/advisories/GHSA-7pw4-f3q4-r2p2",
+          "action": "Upgrade astro to >=7.0.4",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "astro: Astro: Reflected XSS via unescaped View Transition animation properties",
+          "location": "https://github.com/advisories/GHSA-4g3v-8h47-v7g6",
+          "action": "Upgrade astro to >=7.0.10",
+          "humanDecision": false
+        },
+        {
+          "severity": "high",
+          "message": "astro: Astro: Host header SSRF in prerendered error page fetch",
+          "location": "https://github.com/advisories/GHSA-2pvr-wf23-7pc7",
+          "action": "Upgrade astro to >=6.4.6",
+          "humanDecision": false
+        },
+        {
+          "severity": "high",
+          "message": "astro: Astro: Reflected XSS via unescaped slot name",
+          "location": "https://github.com/advisories/GHSA-8hv8-536x-4wqp",
+          "action": "Upgrade astro to >=6.3.3",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "fflate: fflate unzipSync can enter an infinite loop when parsing malformed ZIP64 archives",
+          "location": "https://github.com/advisories/GHSA-px8p-9vwx-vf98",
+          "action": "Upgrade fflate to >=0.7.5",
+          "humanDecision": false
+        },
+        {
+          "severity": "critical",
+          "message": "astro: Astro: Remote code execution through AVIF image optimization",
+          "location": "https://github.com/advisories/GHSA-26w7-cxv4-gfx2",
+          "action": "Upgrade astro to >=7.2.8",
+          "humanDecision": false
+        },
+        {
+          "severity": "medium",
+          "message": "astro: Astro: Authorization bypass from missing path-segment boundary check when stripping the configured base",
+          "location": "https://github.com/advisories/GHSA-376h-93r7-7g6f",
+          "action": "Upgrade astro to >=7.2.4",
+          "humanDecision": false
+        },
+        {
+          "severity": "high",
+          "message": "sharp: sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
+          "location": "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c",
+          "action": "Upgrade sharp to >=0.35.4",
+          "humanDecision": false
+        }
+      ],
+      "details": {
+        "counts": {
+          "info": 0,
+          "low": 4,
+          "moderate": 8,
+          "high": 5,
+          "critical": 1
+        }
+      }
+    },
+    {
+      "id": "secrets",
+      "title": "Secrets scan",
+      "area": "security",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 25,
+      "summary": "no secrets detected",
+      "findings": [],
+      "details": {
+        "hits": []
+      }
+    },
+    {
+      "id": "docs",
+      "title": "Documentation drift",
+      "area": "docs-links",
+      "status": "pass",
+      "score": 100,
+      "durationMs": 1,
+      "summary": "0 missing doc(s), 0 README script drift, 0 env drift, 0/0 route(s) failing",
+      "findings": [],
+      "details": {
+        "missingDocs": [],
+        "readmeScripts": {
+          "mentioned": [
+            "build",
+            "dev",
+            "test",
+            "test:e2e",
+            "typecheck",
+            "lint"
+          ],
+          "missing": []
+        },
+        "env": null,
+        "documentedRoutes": [],
+        "routeProbes": []
+      }
+    },
+    {
+      "id": "bundle",
+      "title": "Bundle-size budget",
+      "area": "performance",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    },
+    {
+      "id": "lighthouse",
+      "title": "Lighthouse (mobile)",
+      "area": "performance",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    },
+    {
+      "id": "axe",
+      "title": "axe-core (WCAG 2.2 AA)",
+      "area": "accessibility",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    },
+    {
+      "id": "links",
+      "title": "Internal links",
+      "area": "docs-links",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    },
+    {
+      "id": "headers",
+      "title": "Security headers",
+      "area": "security",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    },
+    {
+      "id": "load",
+      "title": "Load test (autocannon)",
+      "area": "performance",
+      "status": "skip",
+      "score": null,
+      "durationMs": 0,
+      "summary": "skipped: --no-server",
+      "findings": []
+    }
+  ],
+  "critical": [
+    {
+      "severity": "critical",
+      "message": "astro: Astro: Remote code execution through AVIF image optimization",
+      "location": "https://github.com/advisories/GHSA-26w7-cxv4-gfx2",
+      "action": "Upgrade astro to >=7.2.8",
+      "humanDecision": false
+    }
+  ],
+  "high": [
+    {
+      "severity": "high",
+      "message": "drizzle-orm: Drizzle ORM has SQL injection via improperly escaped SQL identifiers",
+      "location": "https://github.com/advisories/GHSA-gpj5-g38j-94v9",
+      "action": "Upgrade drizzle-orm to >=0.45.2",
+      "humanDecision": false
+    },
+    {
+      "severity": "high",
+      "message": "sharp: sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+      "location": "https://github.com/advisories/GHSA-f88m-g3jw-g9cj",
+      "action": "Upgrade sharp to >=0.35.0",
+      "humanDecision": false
+    },
+    {
+      "severity": "high",
+      "message": "astro: Astro: Host header SSRF in prerendered error page fetch",
+      "location": "https://github.com/advisories/GHSA-2pvr-wf23-7pc7",
+      "action": "Upgrade astro to >=6.4.6",
+      "humanDecision": false
+    },
+    {
+      "severity": "high",
+      "message": "astro: Astro: Reflected XSS via unescaped slot name",
+      "location": "https://github.com/advisories/GHSA-8hv8-536x-4wqp",
+      "action": "Upgrade astro to >=6.3.3",
+      "humanDecision": false
+    },
+    {
+      "severity": "high",
+      "message": "sharp: sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
+      "location": "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c",
+      "action": "Upgrade sharp to >=0.35.4",
+      "humanDecision": false
+    }
+  ],
+  "medium": [
+    {
+      "severity": "medium",
+      "message": "esbuild: esbuild enables any website to send any requests to the development server and read the response",
+      "location": "https://github.com/advisories/GHSA-67mh-4wv8-2f99",
+      "action": "Upgrade esbuild to >=0.24.3",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "astro: Astro: XSS in define:vars via incomplete </script> tag sanitization",
+      "location": "https://github.com/advisories/GHSA-j687-52p2-xcff",
+      "action": "Upgrade astro to >=6.1.6",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "uuid: uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+      "location": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+      "action": "Upgrade uuid to >=11.1.1",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "astro: Astro: XSS via Unescaped Attribute Names in Spread Props",
+      "location": "https://github.com/advisories/GHSA-jrpj-wcv7-9fh9",
+      "action": "Upgrade astro to >=6.4.6",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "astro: Astro: XSS via unescaped spread attribute names in renderHTMLElement (incomplete fix for CVE-2026-54298)",
+      "location": "https://github.com/advisories/GHSA-f48w-9m4c-m7f5",
+      "action": "Upgrade astro to >=7.0.6",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "astro: Astro: Reflected XSS via unescaped View Transition animation properties",
+      "location": "https://github.com/advisories/GHSA-4g3v-8h47-v7g6",
+      "action": "Upgrade astro to >=7.0.10",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "fflate: fflate unzipSync can enter an infinite loop when parsing malformed ZIP64 archives",
+      "location": "https://github.com/advisories/GHSA-px8p-9vwx-vf98",
+      "action": "Upgrade fflate to >=0.7.5",
+      "humanDecision": false
+    },
+    {
+      "severity": "medium",
+      "message": "astro: Astro: Authorization bypass from missing path-segment boundary check when stripping the configured base",
+      "location": "https://github.com/advisories/GHSA-376h-93r7-7g6f",
+      "action": "Upgrade astro to >=7.2.4",
+      "humanDecision": false
+    }
+  ],
+  "automaticallyFixed": [],
+  "requiresHumanDecision": [],
+  "recommendedNextActions": [
+    "[critical] pnpm audit: Upgrade astro to >=7.2.8",
+    "[high] pnpm audit: Upgrade drizzle-orm to >=0.45.2",
+    "[high] pnpm audit: Upgrade sharp to >=0.35.0",
+    "[high] pnpm audit: Upgrade astro to >=6.4.6",
+    "[high] pnpm audit: Upgrade astro to >=6.3.3",
+    "[high] pnpm audit: Upgrade sharp to >=0.35.4",
+    "[medium] pnpm audit: Upgrade esbuild to >=0.24.3",
+    "[medium] pnpm audit: Upgrade astro to >=6.1.6",
+    "[medium] pnpm audit: Upgrade uuid to >=11.1.1",
+    "[medium] pnpm audit: Upgrade astro to >=7.0.6"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "media-grab",
+  "private": true,
+  "version": "0.1.6",
+  "description": "MediaGrab - cross-browser media detection and download manager extension (Chrome/Edge/Brave/Firefox)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite dev --config vite.harness.config.ts",
+    "build": "node scripts/build.mjs",
+    "build:chrome": "node scripts/build.mjs chrome",
+    "build:firefox": "node scripts/build.mjs firefox",
+    "build:harness": "vite build --config vite.harness.config.ts",
+    "preview": "vite preview --config vite.harness.config.ts",
+    "typecheck": "svelte-check --tsconfig ./tsconfig.json && tsc --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "node scripts/build.mjs chrome-test && playwright test",
+    "test:e2e:ui": "playwright test --project=ui",
+    "test:e2e:extension": "node scripts/build.mjs chrome-test && playwright test --project=extension",
+    "knip": "knip"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@biomejs/biome": "^2.6.4",
+    "@playwright/test": "1.62.1",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@types/chrome": "^0.1.28",
+    "@types/node": "^22.20.1",
+    "knip": "^6.34.0",
+    "playwright-core": "1.62.1",
+    "svelte": "^5.57.0",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^4.1.11"
+  },
+  "packageManager": "pnpm@11.1.3"
+}

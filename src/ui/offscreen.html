@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MediaGrab worker</title>
+  </head>
+  <body>
+    <!--
+      No UI. This document exists only because a Chrome MV3 service worker has no
+      URL.createObjectURL, which a segmented download needs before the browser can
+      save the assembled file.
+    -->
+    <script type="module" src="../offscreen/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "extName": {
+    "message": "MediaGrab",
+    "description": "The extension name, shown in the browser's extension list and store listing."
+  },
+  "extDescription": {
+    "message": "Detects downloadable audio and video on the page you are on, shows the real quality options, and downloads them. Does not bypass DRM, paywalls or sign-in.",
+    "description": "The extension description."
+  },
+  "actionTitle": {
+    "message": "MediaGrab",
+    "description": "Tooltip on the toolbar button."
+  },
+  "commandOpen": {
+    "message": "Open MediaGrab",
+    "description": "Keyboard command: open the popup."
+  },
+  "commandScan": {
+    "message": "Scan this page for media",
+    "description": "Keyboard command: rescan the current page."
+  },
+  "commandDownloadBest": {
+    "message": "Download the best available version",
+    "description": "Keyboard command: download the highest-scoring candidate."
+  }
+}

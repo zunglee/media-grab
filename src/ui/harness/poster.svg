@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-label="Fixture poster">
+  <!-- Harness-only stand-in for a real video poster. Flat, in the MediaGrab
+       palette, so the thumbnail state can be seen without a network fetch. -->
+  <rect width="320" height="180" fill="#1e2225"/>
+  <path d="M0 128 L64 104 L128 132 L192 96 L256 124 L320 100 L320 180 L0 180 Z" fill="#2b3034"/>
+  <path d="M0 148 L80 128 L160 152 L240 126 L320 146 L320 180 L0 180 Z" fill="#3c4348"/>
+  <circle cx="238" cy="46" r="18" fill="#e07a2d"/>
+</svg>
